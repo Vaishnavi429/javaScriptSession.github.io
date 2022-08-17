@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       //classs inhertiance
+       //child class inhertiance all proporties and method of parent class and has their own proporties and method
+       //using keyword extend we inhertiance class
+       //super keyword extend parent constructor
+  class person{
+      constructor(firstName,lastName,age){
+      this.firstName= firstName,
+      this.lastName = lastName,
+      this.age = age
+      }
+      displayInfo(){
+          return `${this.firstName} ${this.lastName} is ${this.age} year old`
+      }
+  }
+
+  class student extends person{
+      constructor(firstName,lastName,age,stream,course,batch){
+          super(firstName,lastName,age)
+              this.stream = stream
+              this.course  = course
+              this.batch = batch
+          
+      }
+  }
+
+//   const vaishnavi = new person('Vaishnavi','Gupta','25')
+//   console.log(vaishnavi.displayInfo());
+  const vaishnavi = new student('Vaishnavi','Gupta',25,'Computer Science','Full stack Developer',10)
+  
+ 
+
+   </script>
+</body>
+</html>

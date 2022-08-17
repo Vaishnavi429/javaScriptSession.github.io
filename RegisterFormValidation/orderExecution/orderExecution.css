@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.rowSpace{
+    row-gap: 2em;
+}
+.main-heading{
+    text-align: center;
+
+}
+.executeBtn{
+    
+   margin: 12px auto;
+}
+.card{
+    border-radius: 10px !important;
+   
+}
+
+.card-header{
+    background: black !important;
+    border-radius: 10px 10px 0 0!important;
+    color: white !important;
+}
+.orderNumber{
+    width: 500px !important;
+    margin: 10px auto;
+    text-align: center;
+}
+.card-footer{
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+}
+.order-status{
+    font-size: 1em !important;
+    padding: 8px 30px !important;
+    font-style: italic;
+    background: green !important;
+}
+#empty-image-gif{
+    height: 400px;
+    width: 440px !important;
+    margin: auto;
+    display: block;
+}
+
+.cancel-Btn{
+    background: rgb(216, 54, 54) !important;
+    width: 100%;
+    margin: 0;
+    border-radius: 0 0 10px 10px!important;
+    border: none !important;
+}

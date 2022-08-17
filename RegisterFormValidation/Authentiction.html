@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Authentication</title>
+  <link rel="stylesheet" href="authentication.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- -----------------------------------------navbar------------------------------------- -->
+  <nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+        aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">EasyPeasy</a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="orderExecution/orderExecution.html">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">
+            Sign-up
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Sign-in
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content  modalColor">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">I AM NEW HERE</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="Login">
+
+            <label for="validationServer01" class="form-label">UserName</label>
+            <div class="add_box_shadow">
+              <input type="text" class="form-control" id="username" onkeyup={HandleUserName()}required>
+            </div>
+            <p id="username-text"> </p>
+
+
+            <label for="validationServerUsername" class="form-label">Email</label>
+            <div class="input-group has-validation add_box_shadow">
+              <span class="input-group-text" id="inputGroupPrepend3">@</span>
+              <input type="text" class="form-control" id="email"
+                aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" onkeyup={HandleEmail()} required>
+            </div>
+            <p id="email-text"></p>
+            <label for="validationServer03" class="form-label">New Password</label>
+            <div class="add_box_shadow">
+              <input type="password" class="form-control" id="newPassword" aria-describedby="validationServer03Feedback"
+                onkeyup={HandleNewPassword()} required>
+            </div>
+            <p id="newPassword-text"> </p>
+            <div class="passwordGuide">
+              <ul>
+                <li style="color:black">Password must contain</li>
+                <li>uppercase and lowercase character</li>
+                <li>alphanumeric character </li>
+                <li>special character e.g-!,@,#,$,%,&,* </li>
+              </ul>
+            </div>
+            <label for="validationServer05" class="form-label">confirm password</label>
+            <div class="add_box_shadow">
+              <input type="password" class="form-control" id="confirmPassword"
+                aria-describedby="validationServer05Feedback" onkeyup={HandleConfirmPassword()} required>
+            </div>
+            <p id="confirmPassword-text"></p>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck3"
+                aria-describedby="invalidCheck3Feedback" required>
+              <label class="form-check-label" for="invalidCheck3">
+                Agree to terms and conditions
+              </label>
+              <div id="invalidCheck3Feedback" class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <a href="#" onclick="HandleLoginOpen()">already have account login</a>
+          <button class="btn btn-primary" type="button" onclick={HandleClick()}>Sign-up</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- --------------------------------------------- -->
+
+  <div class="container">
+    <div class="openOder">
+      <h1>Order your favourite Pizza</h1>
+      <button onclick="window.location.href='orderExecution/orderExecution.html'">Continue</button>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="authentication.js"></script>
+
+</body>
+
+</html>

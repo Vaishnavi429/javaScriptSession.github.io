@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Student {
+            constructor(name, batch, techstack, subjectMarks) {
+                this.name = name
+                this.batch = batch
+                this.techstack = techstack
+                this.subjectMarks = subjectMarks
+            }
+            //setter Method (Updating object proporties)
+            inputSubjectMark(MarksArray) {
+                this.subjectMarks.map((subject, index) => {
+                    return subject.marks = MarksArray[index]
+                })
+
+            }
+
+            changeTechStack(toTechStack) {
+                this.techstack = toTechStack
+
+            }
+
+
+
+            // ------------------------------------------
+            AverageMarks() {
+                let Average = this.subjectMarks.reduce((total, subject) => {
+                    return total = total + subject.marks
+                }, 0)
+
+                console.log('Average marks is=' + (Average / 5));
+            }
+        }
+        let Pankaj = new Student('Pankaj', 10, 'MERN',
+            [{
+                subject: 'Mathematics',
+                marks: 0
+            },
+            {
+                subject: 'Science',
+                marks: 0
+            },
+            {
+                subject: 'Social science',
+                marks: 0
+            },
+            {
+                subject: 'English',
+                marks: 0
+            },
+            {
+                subject: 'Hindi',
+                marks: 0
+            },
+            ])
+
+        Pankaj.AverageMarks()
+        Pankaj.changeTechStack('MEAN')
+        Pankaj.inputSubjectMark([45, 78, 56, 70, 65])
+        console.log(Pankaj);
+
+    </script>
+</body>
+
+</html>

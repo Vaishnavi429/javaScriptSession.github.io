@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ToDoStyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="btn-container">
+            <button type="button" class="btn btn-primary createBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create-To-Do-List
+            </button>
+        </div>
+
+        <!-- ------------modal------------------- -->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Create-To-Do-List</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body create-modal">
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="inputTaskID" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div>
+                            <select class="form-select" aria-label="Default select example" id="levelSelected">
+                                <option selected>Medium</option>
+                                <option value="High">High</option>
+                                <option value="Low">Low</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <input type="datetime-local" class="form-control" id="dateTime" aria-label="Username"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" onclick="HandleSaveList()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ListDetail">
+            <div class="TO-DO ListDetail-box" id="parent-To-do-list" ondragover="allowDrop(event)"
+                ondrop="toDoDrop(event)">
+                <h1>TO-DO-List</h1>
+                <div class="card list-card" id="test-id" draggable="true" ondragstart="toDoDragStart(event)">
+                    <div class="card__header">
+                    <h5>medium</h5>
+                    <h3>date</h3>
+                </div>
+                    <div class="card-body">
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Delete</a>
+                    </div>
+                </div>
+            </div>
+            <div class="In-progress ListDetail-box" ondragover="allowDrop(event)" ondrop="toDoDrop(event)">
+                <h1>IN-PROGRESS</h1>
+            </div>
+            <div class="completed ListDetail-box" ondragover="allowDrop(event)" ondrop="toDoDrop(event)">
+                <h1>COMPLETE</h1>
+            </div>
+        </div>
+
+
+        <!-- new Date(
+        document.getElementById("todo-deadline").value
+      ).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+      });     -->
+    </div>
+<script src="JS/createList.js"></script>
+</body>
+
+
+</html>

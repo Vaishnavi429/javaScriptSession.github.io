@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //    let callPromise1 = ()=> new Promise((resolve,reject)=>{
+    //        setTimeout(()=>{
+    //            resolve('resolve first promise')
+    //        },5000)
+    
+    //    })
+
+    //    let callPromise2=()=> new Promise((resolve,reject)=>{
+    //        setTimeout(() => {
+    //            resolve('resolve second promise')
+    //        }, 4000);
+    //    })
+
+
+    //    let underStoodAsync = async()=>{
+    //        try{
+    //      let res1 =await callPromise1()
+    //      console.log(res1);
+    //      let res2 = await callPromise2()
+    //      console.log(res2);
+    //        } catch (err){
+    //            console.log(error);
+    //        }
+    //    }
+    //    underStoodAsync()
+
+    let callCheifRecive= ()=>{
+         new Promise((res,rej)=>{
+            setTimeout(() => {
+            return('Cheif received Order')    
+            }, 2000);
+        })
+    }
+    
+    let ProcessingStart= ()=>{
+         new Promise((res,rej)=>{
+            setTimeout(() => {
+            return('processing start')    
+            }, 2000);
+        })
+    }
+    
+    let PizzaBaked= ()=>{
+         new Promise((res,rej)=>{
+            setTimeout(() => {
+            return('Cheif received Order')    
+            }, 2000);
+        })
+    }
+
+
+
+
+    let OrderPizze=async()=>{
+        try{
+            let res1 = await callCheifRecive()
+            console.log(res1);
+          let res2 = await
+        }
+
+        catch(err){
+  console.log('error message');
+        }
+    }
+       
+   </script> 
+</body>
+</html>
